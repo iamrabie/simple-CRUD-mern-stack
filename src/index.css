@@ -1,13 +1,63 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply rounded-lg flex justify-center items-center font-semibold py-4 px-5 w-[fit-content] gap-x-2 outline-none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.input-styles {
+  @apply w-[480px] h-[40px] rounded-lg border border-secondary py-[10px] px-3 text-sm outline-none;
+}
+
+
+.form-styles {
+  @apply pt-3 px-5 pb-8 flex flex-col gap-y-4 w-[520px]  h-[fit-content] bg-white;
+}
+
+
+.input-div-styles {
+  @apply w-[480px] h-[60px] flex flex-col gap-y-1 text-textSecondary;
+}
+
+
+.alert {
+  @apply w-[335px] h-[68px] border ms-2  rounded-lg p-3 flex gap-x-2 shadow-[0_24px_24px_-12px_rgba(0,0,0,0.15)];
+}
+
+.default-alert {
+  @apply border-secondary bg-default;
+}
+
+.success-alert {
+  @apply border-success bg-success text-white;
+}
+
+.warning-alert {
+  @apply border-warning bg-warning text-black;
+}
+
+.error-alert {
+  @apply border-error bg-error text-white;
+}
+
+.info-alert {
+  @apply border-info bg-info text-white;
+}
+
+.success-light-alert {
+  @apply border-successBorder bg-successLight;
+}
+
+.warning-light-alert {
+  @apply border-warningBorder bg-warningLight;
+}
+
+.error-light-alert {
+  @apply border-errorBorder bg-errorLight;
+}
+
+.info-light-alert {
+  @apply border-infoBorder bg-infoLight;
 }
